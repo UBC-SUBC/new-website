@@ -1,0 +1,15 @@
+{
+  "name": "new_website",
+  "version": "1.0.0",
+  "description": "A new website for SUBC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./view/output.css --watch"
+  },
+  "author": "Niphitphon  Sachdev Khang Huynh",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.15"
+  }
+}
