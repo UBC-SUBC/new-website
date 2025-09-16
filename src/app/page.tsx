@@ -2,102 +2,188 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen" style={{ backgroundColor: '#2a2a2a' }}>
+      {/* Hero Section */}
+      <section id="hero" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+        {/* Background Video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+          src="/videos/hero-video.webm"
+          style={{ 
+            filter: 'brightness(0.4) contrast(1.1) saturate(0.8) hue-rotate(10deg)'
+          }}
+        >
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Light overlay for subtle darkening */}
+        <div 
+          className="absolute top-0 left-0 w-full h-full z-10"
+          style={{ backgroundColor: 'rgba(0, 27, 72, 0.2)' }}
+        ></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        {/* Content */}
+        <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ color: '#D6E8EE' }}>
+            Shift this and all hero section left later
+          </h1>
+          <p className="text-xl md:text-2xl mb-8" style={{ color: '#D6E8EE' }}>
+            desc 
+          </p>
+          <div className="flex gap-4 justify-center">
+            <button className="px-8 py-3 rounded-lg hover:opacity-90 transition-opacity" style={{ backgroundColor: '#001B48', color: '#D6E8EE' }}>
+              b1
+            </button>
+            <button className="border px-8 py-3 rounded-lg hover:opacity-90 transition-opacity" style={{ borderColor: '#D6E8EE', color: '#D6E8EE' }}>
+              b2
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview Section */}
+      <section id="about-preview" className="py-20" style={{ backgroundColor: '#02457A' }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#D6E8EE' }}>
+              About us
+            </h2>
+            <p className="text-lg max-w-3xl mx-auto" style={{ color: '#D6E8EE' }}>
+              about text
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Preview Section */}
+      <section id="team-preview" className="py-20" style={{ backgroundColor: '#018ABE' }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#D6E8EE' }}>Our Team</h2>
+            <p className="text-lg max-w-3xl mx-auto" style={{ color: '#D6E8EE' }}>
+              remove this section later probably
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="text-center">
+                <div className="w-32 h-32 rounded-full mx-auto mb-4" style={{ backgroundColor: '#97CAD8' }}></div>
+                <h3 className="font-semibold" style={{ color: '#D6E8EE' }}>Team Member {i}</h3>
+                <p className="text-sm" style={{ color: '#D6E8EE' }}>Role</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <a 
+              href="/team" 
+              className="inline-block px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105"
+              style={{ backgroundColor: '#001B48', color: '#D6E8EE' }}
+            >
+              Team page button
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Preview Section */}
+      <section id="projects-preview" className="py-20" style={{ backgroundColor: '#97CAD8' }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#001B48' }}>Projects</h2>
+            <p className="text-lg max-w-3xl mx-auto" style={{ color: '#001B48' }}>
+              Replace with 3d models later
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-lg p-6" style={{ backgroundColor: '#02457A' }}>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#D6E8EE' }}>Sub 1</h3>
+              <p className="mb-4" style={{ color: '#D6E8EE' }}>
+                description
+              </p>
+              <div className="w-full h-48 rounded-lg mb-4" style={{ backgroundColor: '#018ABE' }}></div>
+              <button 
+                className="px-6 py-2 rounded-lg font-semibold transition-all hover:scale-105"
+                style={{ backgroundColor: '#D6E8EE', color: '#001B48' }}
+              >
+                Learn More
+              </button>
+            </div>
+            <div className="rounded-lg p-6" style={{ backgroundColor: '#02457A' }}>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#D6E8EE' }}>Sub 2</h3>
+              <p className="mb-4" style={{ color: '#D6E8EE' }}>
+                description
+              </p>
+              <div className="w-full h-48 rounded-lg mb-4" style={{ backgroundColor: '#018ABE' }}></div>
+              <button 
+                className="px-6 py-2 rounded-lg font-semibold transition-all hover:scale-105"
+                style={{ backgroundColor: '#D6E8EE', color: '#001B48' }}
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <a 
+              href="/projects" 
+              className="inline-block px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105"
+              style={{ backgroundColor: '#001B48', color: '#D6E8EE' }}
+            >
+              /projects href
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Sponsorship CTA Section */}
+      <section id="sponsorship-cta" className="py-20" style={{ backgroundColor: '#02457A' }}>
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#D6E8EE' }}>Partner With Us</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#D6E8EE' }}>
+            sponsor us yada yada // TODO add contact popup later
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/sponsorship" 
+              className="inline-block px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105"
+              style={{ backgroundColor: '#D6E8EE', color: '#001B48' }}
+            >
+              Become a Sponsor
+            </a>
+            <a 
+              href="/contact" 
+              className="inline-block px-8 py-3 rounded-lg font-semibold border-2 transition-all hover:scale-105"
+              style={{ borderColor: '#D6E8EE', color: '#D6E8EE' }}
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Us CTA Section */}
+      <section id="join-cta" className="py-20" style={{ backgroundColor: '#001B48' }}>
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#D6E8EE' }}>Join Our Team</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#D6E8EE' }}>
+            Are you passionate about underwater robotics and engineering? 
+            We're always looking for motivated students to join our team.
+          </p>
+          <a 
+            href="/recruitment" 
+            className="inline-block px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105"
+            style={{ backgroundColor: '#97CAD8', color: '#001B48' }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Learn How to Join
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
