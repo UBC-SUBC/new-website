@@ -35,10 +35,20 @@ const Footer = () => {
                 //TODO: add mailing list feature
               </p>
             </div>
-            <div className="text-sm" style={{ color: '#D6E8EE' }}>
-              <p>2345 East Mall</p>
-              <p>Vancouver, BC, V6T 1Z4, Canada</p>
+
+            <div className="text-sm">
+              <a 
+                href="https://maps.app.goo.gl/dzdCjPgkw1k3Z3DLA"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:underline hover:opacity-80 transition-opacity"
+                style={{ color: '#D6E8EE' }}
+              >
+                <p>2345 East Mall</p>
+                <p>Vancouver, BC, V6T 1Z4, Canada</p>
+              </a>
             </div>
+
           </div>
 
           {/* Footer Links */}
