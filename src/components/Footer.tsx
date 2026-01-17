@@ -19,9 +19,8 @@ const Footer = () => {
       { href: 'mailto:hello@subc.ca', label: 'Email' },
       { href: 'https://www.facebook.com/ubc.submarine/', label: 'Facebook', isExternal: true },
       { href: 'https://www.instagram.com/subc_ubc/', label: 'Instagram', isExternal: true },
-      // kept LinkedIn/Discord as placeholders, remove if not needed
-      { href: '#', label: 'LinkedIn' }, 
-      { href: '#', label: 'Discord' },
+      // kept LinkedIn/Discord as placeholders, removed
+
     ]
   };
 
