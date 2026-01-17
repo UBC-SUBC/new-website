@@ -11,16 +11,15 @@ const Footer = () => {
       { href: '/projects', label: 'Projects' },
     ],
     'Get Involved': [
-      { href: '/recruitment', label: 'Join Us' },
       { href: '/sponsorship', label: 'Sponsorship' },
+      { href: '/recruitment', label: 'Recruitment' },
       { href: '/contact', label: 'Contact' },
     ],
     'Connect': [
       { href: 'mailto:hello@subc.ca', label: 'Email' },
       { href: 'https://www.facebook.com/ubc.submarine/', label: 'Facebook', isExternal: true },
       { href: 'https://www.instagram.com/subc_ubc/', label: 'Instagram', isExternal: true },
-      // kept LinkedIn/Discord as placeholders, removed
-
+      { href: 'https://www.linkedin.com/company/ubc-submarine/posts/?feedView=all', label: 'LinkedIn', isExternal: true },
     ]
   };
 
