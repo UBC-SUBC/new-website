@@ -176,7 +176,7 @@ export default function Recruitment() {
             Ready to Make Waves?
           </h2>
           <p className="text-xl mb-8" style={{ color: '#D6E8EE' }}>
-            Join a team of passionate engineers and innovators working on the future of underwater robotics
+            Join a team of passionate engineers and innovators working on competition submarines.
           </p>
           <div className="flex gap-4 justify-center">
             {/* Changed from button to a to utilize the applicationLink variable */}
