@@ -9,6 +9,7 @@ const Footer = () => {
       { href: '/about', label: 'About' },
       { href: '/team', label: 'Team' },
       { href: '/projects', label: 'Projects' },
+      { href: '/competition', label: 'Competition' },
     ],
     'Get Involved': [
       { href: '/sponsorship', label: 'Sponsorship' },
