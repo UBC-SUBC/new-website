@@ -16,7 +16,7 @@ const Footer = () => {
       { href: '/contact', label: 'Contact' },
     ],
     'Connect': [
-      { href: 'mailto:hello@subc.ca', label: 'Email' },
+      { href: 'mailto:hello@subc.ca', label: 'Email: hello@subc.ca' },
       { href: 'https://www.facebook.com/ubc.submarine/', label: 'Facebook', isExternal: true },
       { href: 'https://www.instagram.com/subc_ubc/', label: 'Instagram', isExternal: true },
       { href: 'https://www.linkedin.com/company/ubc-submarine/posts/?feedView=all', label: 'LinkedIn', isExternal: true },

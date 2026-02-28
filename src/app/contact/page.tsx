@@ -4,17 +4,27 @@ export default function Contact() {
   const contactMethods = [
     {
       icon: "✉️",
-      title: "Email Us",
-      description: "For general inquiries and sponsorship opportunities",
+      title: "Email",
       action: "hello@subc.ca",
       link: "mailto:hello@subc.ca"
     },
     {
-      icon: "📱",
-      title: "Social Media",
-      description: "Follow our latest updates and stories",
+      icon: "📘",
+      title: "Facebook",
+      action: "@ubc.submarine",
+      link: "https://www.facebook.com/ubc.submarine/"
+    },
+    {
+      icon: "📸",
+      title: "Instagram",
       action: "@subc_ubc",
       link: "https://www.instagram.com/subc_ubc/"
+    },
+    {
+      icon: "💼",
+      title: "LinkedIn",
+      action: "UBC Submarine",
+      link: "https://www.linkedin.com/company/ubc-submarine"
     },
     {
       icon: "📍",
@@ -33,43 +43,32 @@ export default function Contact() {
 
       <main className="min-h-screen pt-16" style={{ backgroundColor: '#2a2a2a' }}>
         
-        {/* Hero Section */}
+        {/* Section 1: Hero & Contact Channels */}
         <section className="py-20" style={{ background: 'linear-gradient(135deg, #018ABE, #02457A)' }}>
-          <div className="max-w-4xl mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            
             <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#D6E8EE' }}>
               Get in Touch
             </h1>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#D6E8EE' }}>
-              We'd love to hear from you. Whether you are interested in joining, 
-              sponsoring, or just want to chat about submarines, we are here.
-            </p>
-          </div>
-        </section>
-
-        {/* Contact Info Grid Section (Matches Executive Team Section style) */}
-        <section className="py-20" style={{ backgroundColor: '#02457A' }}>
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#D6E8EE' }}>Contact Channels</h2>
-              <p className="text-lg" style={{ color: '#D6E8EE' }}>
-                Reach out to us through any of the platforms below
-              </p>
-            </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            {/* Integrated, concise wording */}
+            <p className="text-xl max-w-3xl mx-auto mb-16" style={{ color: '#D6E8EE' }}>
+              Whether you're looking to join, sponsor, or have a specific question, we'd love to hear from you! Send us an email or follow our socials for the latest updates.
+            </p>
+
+            {/* 5 Contact Blocks moved here */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {contactMethods.map((method, index) => (
-                <div key={index} className="text-center p-8 rounded-lg transition-transform hover:-translate-y-1" style={{ backgroundColor: '#001B48' }}>
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#97CAD8' }}>
-                    <span className="text-3xl">{method.icon}</span>
+                <div key={index} className="text-center p-6 rounded-lg transition-transform hover:-translate-y-1 shadow-lg" style={{ backgroundColor: '#001B48' }}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#97CAD8' }}>
+                    <span className="text-2xl">{method.icon}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#D6E8EE' }}>{method.title}</h3>
-                  <p className="mb-4 text-sm" style={{ color: '#D6E8EE', opacity: 0.8 }}>{method.description}</p>
-                  
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#D6E8EE' }}>{method.title}</h3>
                   <a 
                     href={method.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold hover:underline" 
+                    className="font-bold text-sm hover:underline break-words" 
                     style={{ color: '#97CAD8' }}
                   >
                     {method.action}
@@ -77,11 +76,12 @@ export default function Contact() {
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
-        {/* Location / Map Section (Matches Departments Section style) */}
-        <section className="py-20" style={{ backgroundColor: '#018ABE' }}>
+        {/* Section 2: Location / Map (Moved up to the #02457A section) */}
+        <section className="py-20" style={{ backgroundColor: '#02457A' }}>
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#D6E8EE' }}>Find Us on Campus</h2>
@@ -92,9 +92,7 @@ export default function Contact() {
 
             <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#001B48', padding: '1rem' }}>
               <div className="w-full h-96 bg-gray-300 rounded">
-                 {/* Note: I used the EDC embed link here. 
-                    If you have a specific Google Maps Embed URL, replace the src below.
-                 */}
+                 {/* Google Maps Embed */}
                 <iframe
                   title="SUBC Location"
                   loading="lazy"
@@ -106,36 +104,6 @@ export default function Contact() {
               <div className="mt-4 text-center">
                  <p style={{ color: '#D6E8EE' }}>2345 East Mall, Vancouver, BC V6T 1Z4</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ / Direct Message Section (Matches CTA Section style) */}
-        <section className="py-20" style={{ backgroundColor: '#001B48' }}>
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#D6E8EE' }}>
-              Have a Specific Question?
-            </h2>
-            <p className="text-xl mb-8" style={{ color: '#D6E8EE' }}>
-              Check out our social media for the latest updates, or send us an email directly.
-            </p>
-            <div className="flex gap-4 justify-center">
-              <a 
-                href="mailto:hello@subc.ca"
-                className="px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-block"
-                style={{ backgroundColor: '#97CAD8', color: '#001B48' }}
-              >
-                Email Us
-              </a>
-              <a 
-                href="https://www.facebook.com/ubc.submarine/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-block"
-                style={{ borderColor: '#D6E8EE', color: '#D6E8EE' }}
-              >
-                Facebook
-              </a>
             </div>
           </div>
         </section>
