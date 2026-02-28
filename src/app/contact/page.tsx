@@ -98,7 +98,7 @@ export default function Contact() {
                   loading="lazy"
                   className="w-full h-full border-0 rounded"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.399478332906!2d-123.25306668431016!3d49.26213037932876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672b10953188b%3A0x643666b6c0032274!2sWayne%20and%20William%20White%20Engineering%20Design%20Centre!5e0!3m2!1sen!2sca!4v1620000000000!5m2!1sen!2sca"
-                  allowFullScreen=""
+                  allowFullScreen = {true}
                 ></iframe>
               </div>
               <div className="mt-4 text-center">
