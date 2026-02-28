@@ -100,7 +100,7 @@ export default function Contact() {
                   loading="lazy"
                   className="w-full h-full border-0 rounded"
                   // The updated src uses a keyless Google Maps embed query pointing to the EDC building
-                  src="https://maps.google.com/maps?q=Wayne%20and%20William%20White%20Engineering%20Design%20Centre&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Wayne%20and%20William%20White%20Engineering%20Design%20Centre&t=&z=13&ie=UTF8&iwloc=&output=embed"
                   allowFullScreen
                 ></iframe>
               </div>
