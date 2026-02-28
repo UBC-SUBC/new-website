@@ -90,21 +90,24 @@ export default function Contact() {
               </p>
             </div>
 
+
             <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: '#001B48', padding: '1rem' }}>
               <div className="w-full h-96 bg-gray-300 rounded">
-                 {/* Google Maps Embed */}
                 <iframe
                   title="SUBC Location"
                   loading="lazy"
                   className="w-full h-full border-0 rounded"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.399478332906!2d-123.25306668431016!3d49.26213037932876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672b10953188b%3A0x643666b6c0032274!2sWayne%20and%20William%20White%20Engineering%20Design%20Centre!5e0!3m2!1sen!2sca!4v1620000000000!5m2!1sen!2sca"
-                  allowFullScreen = {true}
+                  // The updated src uses a keyless Google Maps embed query pointing to the EDC building
+                  src="https://maps.google.com/maps?q=Wayne%20and%20William%20White%20Engineering%20Design%20Centre&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  allowFullScreen
                 ></iframe>
               </div>
               <div className="mt-4 text-center">
                  <p style={{ color: '#D6E8EE' }}>2345 East Mall, Vancouver, BC V6T 1Z4</p>
               </div>
             </div>
+
+
           </div>
         </section>
 
