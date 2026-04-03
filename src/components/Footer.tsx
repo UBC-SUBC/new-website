@@ -9,17 +9,18 @@ const Footer = () => {
       { href: '/about', label: 'About' },
       { href: '/team', label: 'Team' },
       { href: '/projects', label: 'Projects' },
+      { href: '/competition', label: 'Competition' },
     ],
     'Get Involved': [
-      { href: '/recruitment', label: 'Join Us' },
       { href: '/sponsorship', label: 'Sponsorship' },
+      { href: '/recruitment', label: 'Recruitment' },
       { href: '/contact', label: 'Contact' },
     ],
     'Connect': [
-      { href: '#', label: 'Instagram' },
-      { href: '#', label: 'LinkedIn' },
-      { href: '#', label: 'Email' },
-      { href: '#', label: 'Discord' },
+      { href: 'mailto:hello@subc.ca', label: 'Email: hello@subc.ca' },
+      { href: 'https://www.facebook.com/ubc.submarine/', label: 'Facebook', isExternal: true },
+      { href: 'https://www.instagram.com/subc_ubc/', label: 'Instagram', isExternal: true },
+      { href: 'https://www.linkedin.com/company/ubc-submarine/posts/?feedView=all', label: 'LinkedIn', isExternal: true },
     ]
   };
 
@@ -35,10 +36,20 @@ const Footer = () => {
                 //TODO: add mailing list feature
               </p>
             </div>
-            <div className="text-sm" style={{ color: '#D6E8EE' }}>
-              <p>2345 East Mall</p>
-              <p>Vancouver, BC, V6T 1Z4, Canada</p>
+
+            <div className="text-sm">
+              <a 
+                href="https://maps.app.goo.gl/dzdCjPgkw1k3Z3DLA"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:underline hover:opacity-80 transition-opacity"
+                style={{ color: '#D6E8EE' }}
+              >
+                <p>2345 East Mall</p>
+                <p>Vancouver, BC, V6T 1Z4, Canada</p>
+              </a>
             </div>
+
           </div>
 
           {/* Footer Links */}
